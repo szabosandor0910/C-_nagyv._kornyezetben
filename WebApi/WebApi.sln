@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi_Server_Konyvtar", "WebApi_Server_Konyvtar\WebApi_Server_Konyvtar.csproj", "{0B8B31B3-DBF9-4451-937B-4B17E2839DEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi_Server_Konyvtar", "WebApi_Server_Konyvtar\WebApi_Server_Konyvtar.csproj", "{0B8B31B3-DBF9-4451-937B-4B17E2839DEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi_Common", "WebApi_Common\WebApi_Common.csproj", "{7A12FD4C-F8AE-4F6D-827F-EA186FBBAA13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0B8B31B3-DBF9-4451-937B-4B17E2839DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B8B31B3-DBF9-4451-937B-4B17E2839DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B8B31B3-DBF9-4451-937B-4B17E2839DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A12FD4C-F8AE-4F6D-827F-EA186FBBAA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A12FD4C-F8AE-4F6D-827F-EA186FBBAA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A12FD4C-F8AE-4F6D-827F-EA186FBBAA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A12FD4C-F8AE-4F6D-827F-EA186FBBAA13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

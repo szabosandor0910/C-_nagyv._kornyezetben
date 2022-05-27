@@ -19,3 +19,6 @@ C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\obj\Debug\n
 C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\obj\Debug\net6.0\WebApi_Server_Konyvtar.pdb
 C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\obj\Debug\net6.0\WebApi_Server_Konyvtar.genruntimeconfig.cache
 C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\obj\Debug\net6.0\ref\WebApi_Server_Konyvtar.dll
+C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\bin\Debug\net6.0\WebApi_Common.dll
+C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\bin\Debug\net6.0\WebApi_Common.pdb
+C:\Users\Balazs\C-_nagyv._kornyezetben\WebApi\WebApi_Server_Konyvtar\obj\Debug\net6.0\WebApi_Server_Konyvtar.csproj.CopyComplete

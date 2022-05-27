@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "WebApi_Server_Konyvtar/1.0.0": {
-        "dependencies": {
-          "WebApi_Common": "1.0.0"
-        },
-        "runtime": {
-          "WebApi_Server_Konyvtar.dll": {}
-        }
-      },
       "WebApi_Common/1.0.0": {
         "runtime": {
           "WebApi_Common.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "WebApi_Server_Konyvtar/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "WebApi_Common/1.0.0": {
       "type": "project",
       "serviceable": false,
