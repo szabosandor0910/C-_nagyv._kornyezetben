@@ -11,7 +11,7 @@ namespace WebApi_Server_Konyvtar.Controllers
 {
     [ApiController]
     [Route("api/book")]
-    public class BookController : Controller
+    public  class BookController : Controller
     {
         private long GetNewId(IEnumerable<Book> library)
         {
@@ -29,7 +29,7 @@ namespace WebApi_Server_Konyvtar.Controllers
 
 
         [HttpGet]
-        public ActionResult<IEnumerable<Book>> Get()
+        public ActionResult<Book> Get()
         {
 
             var library = BookRepository.GetLibrary();
