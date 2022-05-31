@@ -13,19 +13,7 @@ namespace WebApi_Server_Konyvtar.Controllers
     [Route("api/book")]
     public  class BookController : Controller
     {
-        private long GetNewId(IEnumerable<Book> library)
-        {
-            long newId = 0;
-            foreach (var book in library)
-            {
-                if (newId < book.Id)
-                {
-                    newId = book.Id;
-                }
-            }
-
-            return newId + 1;
-        }
+        
 
 
         [HttpGet]
@@ -39,61 +27,48 @@ namespace WebApi_Server_Konyvtar.Controllers
         [HttpGet("{id}")]
         public ActionResult<Book> Get(int id)
         {
-            var library = BookRepository.GetLibrary();
 
-            var book = library.FirstOrDefault(x => x.Id == id);
+            var book = BookRepository.Getbook(id);
             if (book != null)
             {
-                return Ok(library);
+                return Ok(book);
             }
 
             return NotFound();
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] Book book)
+        public ActionResult Post(Book book)
         {
-            var Library = BookRepository.GetLibrary().ToList();
 
-            book.Id = GetNewId(Library);
-            Library.Add(book);
 
-            BookRepository.StoreLibrary(Library);
+
+
+            BookRepository.Addbook(book);
             return Ok();
         }
 
-        [HttpPut]
-        public ActionResult Put([FromBody] Book book)
+        [HttpPut("{id}")]
+        public ActionResult Put(Book book, int id)
         {
-            var Library = BookRepository.GetLibrary().ToList();
+            var dbbook = BookRepository.Getbook(id);
 
-            var BookToUpdate = Library.FirstOrDefault(p => p.Id == book.Id);
-            if (BookToUpdate != null)
+            if (dbbook != null)
             {
-                BookToUpdate.Title = book.Title;
-                BookToUpdate.Loaned = book.Loaned;
-                BookToUpdate.WhoLoan = book.WhoLoan;
-                BookToUpdate.StartDate = book.StartDate;
-                BookToUpdate.EndDate = book.EndDate;
-
-                BookRepository.StoreLibrary(Library);
+                BookRepository.UpdateBook(book, id);
                 return Ok();
             }
-
             return NotFound();
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var Library = BookRepository.GetLibrary().ToList();
-
-            var BookToDelete = Library.FirstOrDefault(p => p.Id == id);
-            if (BookToDelete != null)
+            var book = BookRepository.Getbook(id);
+            if (book != null)
             {
-                Library.Remove(BookToDelete);
 
-                BookRepository.StoreLibrary(Library);
+                BookRepository.DeleteBook(book);
                 return Ok();
             }
 

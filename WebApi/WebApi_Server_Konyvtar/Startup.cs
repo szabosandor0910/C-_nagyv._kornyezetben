@@ -23,8 +23,7 @@ namespace WebApi_Server_Konyvtar
             services.AddCors();
             services.AddControllers();
 
-            services.AddDbContext<BookContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("ServerDb")));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

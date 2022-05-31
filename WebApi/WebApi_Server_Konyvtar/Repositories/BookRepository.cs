@@ -36,28 +36,49 @@ namespace WebApi_Server_Konyvtar.Repositories
                 return library; 
             }
         }
-        public static void StoreLibrary(IList<Book> library)
-        {
-            var appDataPath = GetAppDataPath();
-            var rawContext = JsonSerializer.Serialize(library);
-            File.WriteAllText(appDataPath, rawContext); 
-        }
-        private static string GetAppDataPath()
-        {
-            var localAppFolder = GetLocalFolder();
-            var AppDataPath = Path.Combine((string)localAppFolder, "Book.json");
-            return AppDataPath;
 
-        }
-
-        private static object GetLocalFolder()
+        public static Book Getbook(int id)
         {
-            var localAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            var localAppFolder = Path.Combine(localAppDataFolder, "WebApi_Server_Konyvtar");
-            if(!Directory.Exists(localAppFolder))
+            using (var database = new BookContext())
             {
-                Directory.CreateDirectory(localAppFolder);
+                var onebook = database.book.Where(p=> p.Id == id).FirstOrDefault();
+                return onebook;
             }
-            return localAppFolder;
+        }
+        public static void Addbook(Book book)
+        {
+            using (var database = new BookContext())
+            {
+                database.book.Add(book);
+
+                database.SaveChanges();
+            }
+
+        }
+
+        public static void DeleteBook(Book book)
+        {
+            using (var database = new BookContext())
+            {
+                database.book.Remove(book);
+
+                database.SaveChanges();
+            }
+
+        }
+        public static void UpdateBook(Book book, int id)
+        {
+            using (var database = new BookContext())
+            {
+                
+                    database.book.Update(book);
+                    database.SaveChanges();
+
+                
+        
+            }
+        }
+
+
     }
 }
