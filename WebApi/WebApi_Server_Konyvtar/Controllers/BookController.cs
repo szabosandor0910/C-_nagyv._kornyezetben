@@ -40,10 +40,6 @@ namespace WebApi_Server_Konyvtar.Controllers
         [HttpPost]
         public ActionResult Post(Book book)
         {
-
-
-
-
             BookRepository.Addbook(book);
             return Ok();
         }
