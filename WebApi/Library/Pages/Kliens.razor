@@ -1,0 +1,45 @@
+﻿@page "/Client"
+
+@if (AllBook == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Könyv neve</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in AllBook)
+            {
+                if (@book.Loaned == false)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+
+
+
+        <EditForm Model="@AllBook" OnValidSubmit="@SubmitForm">
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-3">Saját név: </label>
+                <InputText id="OwnName" class="form-control col-sm-8" bind="@MyInput" placeholder="OwnName"></InputText>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Lekér</button>
+        </EditForm>
+
+
+    }
+
+
+

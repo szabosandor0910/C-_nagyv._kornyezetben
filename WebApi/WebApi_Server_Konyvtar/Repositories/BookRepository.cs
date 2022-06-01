@@ -66,11 +66,11 @@ namespace WebApi_Server_Konyvtar.Repositories
             }
 
         }
-        public static void UpdateBook(Book book, int id)
+        public static void UpdateBook(Book bookt)
         {
             using (var database = new BookContext())
             { 
-                    database.book.Update(book);
+                    database.book.Update(bookt);
                     database.SaveChanges();
             }
         }

@@ -1,0 +1,37 @@
+﻿@page "/books"
+<h3>Könyvek listája</h3>
+
+
+@if (Books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <a href="@($"books/Kolcsonzes")" class="btn btn-info table-btn">Kölcsönzés</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Könyv neve</th>
+                <th>Bent van-e</th>
+                <th>Kinél van</th>
+                <th>Mikor kölcsönözték</th>
+                <th>Mikorra hozzák vissza</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Books)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Loaned</td>
+                    <td>@book.WhoLoan</td>
+                    <td>@book.StartDate.ToString()</td>
+                    <td>@book.EndDate.ToString()</td>
+
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,33 @@
+﻿@page "/books/Kolcsonzes"
+
+@if (Books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Könyv neve</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Books)
+            {
+                if (@book.Loaned == false)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>
+                            <a href="@($"book/{book.Id}/loan")" class="btn btn-primary table-btn">Kolcsonzes</a>
+                        </td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+}
+

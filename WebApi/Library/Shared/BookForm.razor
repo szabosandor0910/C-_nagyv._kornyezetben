@@ -1,0 +1,22 @@
+﻿<EditForm Model="@book" OnValidSubmit="@SubmitForm">
+    <div class="form-group row">
+        <label for="firstName" class="col-sm-3">Title: </label>
+        <InputText id="title" class="form-control col-sm-8" @bind-Value="@book.Title" placeholder="Title"></InputText>
+    </div>
+
+    <div class="form-group row">
+        <label for="lastName" class="col-sm-3">Name: </label>
+        <InputText id="name" class="form-control col-sm-8" @bind-Value="@book.WhoLoan" placeholder="Name"></InputText>
+    </div>
+    <div class="form-group row">
+        <label for="dateOfBirth" class="col-sm-3">Loaned date: </label>
+        <InputDate id="dateOfBirth" class="form-control col-sm-8" @bind-Value="@book.StartDate" placeholder="Start Date"></InputDate>
+    </div>
+    <div class="form-group row">
+        <label for="dateOfBirth" class="col-sm-3">End date: </label>
+        <InputDate id="dateOfBirth" class="form-control col-sm-8" @bind-Value="@book.EndDate" placeholder="End Date"></InputDate>
+    </div>
+ 
+
+    <button type="submit" class="btn btn-primary">@ButtonTitle</button>
+</EditForm>

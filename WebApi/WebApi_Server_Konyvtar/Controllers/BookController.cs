@@ -17,7 +17,7 @@ namespace WebApi_Server_Konyvtar.Controllers
 
 
         [HttpGet]
-        public ActionResult<Book> Get()
+        public ActionResult<IEnumerable<Book>> Get()
         {
 
             var library = BookRepository.GetLibrary();
@@ -51,7 +51,7 @@ namespace WebApi_Server_Konyvtar.Controllers
 
             if (dbbook != null)
             {
-                BookRepository.UpdateBook(book, id);
+                BookRepository.UpdateBook(book);
                 return Ok();
             }
             return NotFound();

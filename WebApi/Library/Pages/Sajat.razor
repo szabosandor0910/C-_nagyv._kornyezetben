@@ -1,0 +1,37 @@
+﻿@page "/SajatKolcsonzes"
+
+
+@if (Books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    
+
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th>Könyv neve</th>
+                    <th>Mikorra kell visszahozni</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Books)
+                {
+                   
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.EndDate</td>
+
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+
+
+
