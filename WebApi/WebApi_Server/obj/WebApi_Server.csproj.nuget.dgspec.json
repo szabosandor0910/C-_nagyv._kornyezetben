@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Server\\WebApi_Server.csproj": {}
+    "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\WebApi_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
+    "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
+        "projectUniqueName": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
         "projectName": "WebApi_Common",
-        "projectPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
-        "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\obj\\",
+        "projectPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
+        "packagesPath": "C:\\Users\\Szabo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,21 +64,17 @@
         }
       }
     },
-    "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Server\\WebApi_Server.csproj": {
+    "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\WebApi_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Server\\WebApi_Server.csproj",
+        "projectUniqueName": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\WebApi_Server.csproj",
         "projectName": "WebApi_Server",
-        "projectPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Server\\WebApi_Server.csproj",
-        "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Server\\obj\\",
+        "projectPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\WebApi_Server.csproj",
+        "packagesPath": "C:\\Users\\Szabo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +88,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
-                "projectPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj"
+              "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
+                "projectPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj"
               }
             }
           }

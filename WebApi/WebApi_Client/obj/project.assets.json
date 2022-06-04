@@ -66,24 +66,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Balazs\\.nuget\\packages\\": {},
-    "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Szabo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Client\\WebApi_Client.csproj",
+      "projectUniqueName": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Client\\WebApi_Client.csproj",
       "projectName": "WebApi_Client",
-      "projectPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Client\\WebApi_Client.csproj",
-      "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Client\\obj\\",
+      "projectPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Client\\WebApi_Client.csproj",
+      "packagesPath": "C:\\Users\\Szabo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Client\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -97,8 +92,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
-              "projectPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj"
+            "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
+              "projectPath": "C:\\Users\\Szabo\\Desktop\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj"
             }
           }
         }

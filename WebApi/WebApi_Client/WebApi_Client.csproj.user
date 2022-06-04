@@ -7,7 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="KolcsonzoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="KonyvtarosWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SajatKonyvek.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UjKonyv.xaml.cs">
@@ -15,10 +21,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="KolcsonzoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="KonyvtarosWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SajatKonyvek.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UjKonyv.xaml">

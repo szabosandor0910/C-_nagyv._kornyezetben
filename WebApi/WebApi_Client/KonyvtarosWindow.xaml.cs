@@ -48,14 +48,24 @@ namespace WebApi_Client
 
         }
 
-        private void UjKonyv_Click(object sender, RoutedEventArgs args)
+        private void Kolcsonzes_Click(object sender, RoutedEventArgs args)
         {
-            var window = new UjKonyv(null);
-            if (window.ShowDialog() ?? false)
+            var book = BookDataProvider.GetBook().ToList();
+            List<Book> thisBooks = new List<Book>();
+            if(!string.IsNullOrEmpty(Keres.Text))
             {
-                UpdateBookListBox();
+                foreach (var item in book)
+                {
+                    if (item.Title.Equals(Keres.Text))
+                    {
+                        thisBooks.Add(item);
+                    }
+                }
+                BookListBox.ItemsSource = thisBooks;
+            }else
+            {
+                BookListBox.ItemsSource = book;
             }
-
         }
 
         private void UpdateBookListBox()

@@ -32,5 +32,12 @@ namespace WebApi_Client
             window.Show();
            
         }
+        private void Kolcsonzo_Click(object sender, RoutedEventArgs args)
+        {
+            var window = new KolcsonzoWindow();
+            window.Show();
+
+        }
+
     }
 }
