@@ -71,6 +71,15 @@ namespace WebApi_Client
         private void UpdateBookListBox()
         {
             var book = BookDataProvider.GetBook().ToList();
+            foreach (var item in book)
+            {
+                if(item.Loaned == false)
+                {
+                    item.WhoLoan = "";
+                    item.StartDate = DateTime.Now;
+                    item.EndDate = DateTime.Now;
+                }
+            }
             BookListBox.ItemsSource = book;
 
         }

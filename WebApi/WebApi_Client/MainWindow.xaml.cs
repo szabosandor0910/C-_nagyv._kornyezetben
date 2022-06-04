@@ -25,7 +25,12 @@ namespace WebApi_Client
             InitializeComponent();
         }
 
+        private void AddBook_Click(object sender, RoutedEventArgs args)
+        {
+            var window = new UjKonyv(null);
+            window.Show();
 
+        }
         private void Konyvtaros_Click(object sender, RoutedEventArgs args)
         {
             var window = new KonyvtarosWindow();

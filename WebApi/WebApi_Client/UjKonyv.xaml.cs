@@ -54,23 +54,41 @@ namespace WebApi_Client
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            
-                _book.Title = CimTextBox.Text;
-                _book.Loaned = (bool)CheckBox.IsChecked;
-                _book.WhoLoan = KolcsonozteTextBox.Text;
-                _book.StartDate = KezdoDatePicker.SelectedDate.Value;
-                _book.EndDate = VegeDatePicker.SelectedDate.Value;
+                if((bool)CheckBox.IsChecked == false)
+                {
+                    _book.Title = CimTextBox.Text;
+                    _book.Loaned = (bool)CheckBox.IsChecked;
+                    _book.WhoLoan = "";
+                    _book.StartDate = DateTime.Now;
+                    _book.EndDate = DateTime.Now;
 
-                BookDataProvider.CreateBook(_book);
+                    BookDataProvider.CreateBook(_book);
+                }
+                else {
+                    _book.Title = CimTextBox.Text;
+                    _book.Loaned = (bool)CheckBox.IsChecked;
+                    _book.WhoLoan = KolcsonozteTextBox.Text;
+                    _book.StartDate = KezdoDatePicker.SelectedDate.Value;
+                    _book.EndDate = VegeDatePicker.SelectedDate.Value;
 
-                DialogResult = true;
+                    BookDataProvider.CreateBook(_book);
+                }
+
+
+
                 Close();
             
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            
+           
+            if ((bool)CheckBox.IsChecked == true && (string.IsNullOrEmpty(KolcsonozteTextBox.Text) || DateTime.Compare(KezdoDatePicker.SelectedDate.Value, VegeDatePicker.SelectedDate.Value) >= 0))
+            {
+                Console.WriteLine("Hiba");
+            }
+            else
+            {
                 _book.Title = CimTextBox.Text;
                 _book.Loaned = (bool)CheckBox.IsChecked;
                 _book.WhoLoan = KolcsonozteTextBox.Text;
@@ -78,6 +96,9 @@ namespace WebApi_Client
                 _book.EndDate = VegeDatePicker.SelectedDate.Value;
 
                 BookDataProvider.UpdateBook(_book);
+            }
+
+            
 
                 DialogResult = true;
                 Close();

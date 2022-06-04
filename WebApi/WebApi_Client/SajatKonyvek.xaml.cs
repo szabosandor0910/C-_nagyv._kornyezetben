@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WebApi_Client.DataProviders;
+using WebApi_Common.Models;
 
 namespace WebApi_Client
 {
@@ -22,6 +24,60 @@ namespace WebApi_Client
         public SajatKonyvek()
         {
             InitializeComponent();
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs args)
+        {
+            var selectedBook = BookListBox.SelectedItem as Book;
+
+            if (selectedBook != null)
+            {
+                var window = new UjKonyv(selectedBook);
+                if (window.ShowDialog() ?? false)
+                {
+                    UpdateBookListBox();
+                }
+
+                BookListBox.UnselectAll();
+            }
+
+        }
+
+        private void Kereses_Click(object sender, RoutedEventArgs args)
+        {
+            var book = BookDataProvider.GetBook().ToList();
+            List<Book> thisBooks = new List<Book>();
+            if (!string.IsNullOrEmpty(Keres.Text))
+            {
+                foreach (var item in book)
+                {
+                    if (item.WhoLoan.Equals(Keres.Text))
+                    {
+                        thisBooks.Add(item);
+                    }
+                }
+                BookListBox.ItemsSource = thisBooks;
+            }
+            else
+            {
+                BookListBox.ItemsSource = book;
+            }
+        }
+
+        private void UpdateBookListBox()
+        {
+            var book = BookDataProvider.GetBook().ToList();
+            foreach (var item in book)
+            {
+                if (item.Loaned == false)
+                {
+                    item.WhoLoan = "";
+                    item.StartDate = DateTime.Now;
+                    item.EndDate = DateTime.Now;
+                }
+            }
+            BookListBox.ItemsSource = book;
+
         }
     }
 }
