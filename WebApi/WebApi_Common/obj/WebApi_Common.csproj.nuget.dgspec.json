@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Balazs\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {}
+    "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Balazs\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
+    "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balazs\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
+        "projectUniqueName": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
         "projectName": "WebApi_Common",
-        "projectPath": "C:\\Users\\Balazs\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
+        "projectPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
         "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balazs\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\obj\\",
+        "outputPath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "H:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,14 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5kx0bbrsjDajAWK2rfd+OAG8L48+qVeVelo43OlkWTOKuwsN5T3zhpdQ3Fpr1JPSM+nBbO6rT1wFokBrFg+WeQ==",
+  "dgSpecHash": "U8O89kjy+bjQpLB1vjCRaFjkMpF8notdywp243P0D9kXGcRCL+cOWyYQh3ICHuVj+OWQLq3fUYwqVwkHI9DLKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balazs\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Balazs\\Desktop\\WebApi\\WebApi_Common\\WebApi_Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Balazs\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
