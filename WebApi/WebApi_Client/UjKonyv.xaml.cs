@@ -22,6 +22,7 @@ namespace WebApi_Client
     public partial class UjKonyv : Window
     {
         private readonly Book _book;
+
         public UjKonyv(Book book)
         {
             InitializeComponent();
@@ -60,9 +61,11 @@ namespace WebApi_Client
                 _book.Title = CimTextBox.Text;
                 _book.Loaned = (bool)CheckBox.IsChecked;
                 _book.WhoLoan = KolcsonozteTextBox.Text;
-                _book.StartDate = KezdoDatePicker.SelectedDate.Value;
-                _book.EndDate = VegeDatePicker.SelectedDate.Value;
-
+                if (ValidateDate())
+                {
+                    _book.StartDate = KezdoDatePicker.SelectedDate.Value;
+                    _book.EndDate = VegeDatePicker.SelectedDate.Value;
+                }
                 BookDataProvider.CreateBook(_book);
 
                 DialogResult = true;
@@ -77,9 +80,10 @@ namespace WebApi_Client
                 _book.Title = CimTextBox.Text;
                 _book.Loaned = (bool)CheckBox.IsChecked;
                 _book.WhoLoan = KolcsonozteTextBox.Text;
-                _book.StartDate = KezdoDatePicker.SelectedDate.Value;
-                _book.EndDate = VegeDatePicker.SelectedDate.Value;
-
+                if (ValidateDate()){
+                   _book.StartDate = KezdoDatePicker.SelectedDate.Value;
+                   _book.EndDate = VegeDatePicker.SelectedDate.Value;
+                }
                 BookDataProvider.UpdateBook(_book);
 
                 DialogResult = true;
@@ -97,7 +101,7 @@ namespace WebApi_Client
                 Close();
             }
         }
-        private bool ValidateBook()
+        public bool ValidateBook()
         {
             if (string.IsNullOrEmpty(CimTextBox.Text))
             {
@@ -124,6 +128,16 @@ namespace WebApi_Client
             }
 
             return true;
+        }
+        public bool ValidateDate() {
+            if (VegeDatePicker.SelectedDate.Value < KezdoDatePicker.SelectedDate.Value)
+            {
+                MessageBox.Show("A vége dátum nem kisebb a kezdőnél!");
+                return false;
+            }
+
+            return true;
+
         }
 
 

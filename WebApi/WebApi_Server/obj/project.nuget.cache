@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W9V4ihkjWOFuTPsRU7ZGIsF/Y5QkYtuPIY59frbMiTihsjQYZOXLbK/eunnYqMmufIiQHvvXhaLenKiCnP0MMw==",
+  "dgSpecHash": "WTMv5LUdlk2TxYNGSMUL97G1AwjTVpSpyMw/Pw5UPZPOskkK9fw9MafDt7SIjj5O/zNXRHoAdBwZ8zp2J/zzdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balazs\\Source\\Repos\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\WebApi_Server.csproj",
+  "projectFilePath": "C:\\Users\\Balazs\\source\\repos\\C-_nagyv._kornyezetben\\WebApi\\WebApi_Server\\WebApi_Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Balazs\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
