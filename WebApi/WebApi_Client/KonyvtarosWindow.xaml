@@ -16,7 +16,7 @@
 
         <Label Grid.Row="0" Content="Könyvek" FontWeight="Bold" Margin="15, 15, 15, 0"/>
 
-        <ListBox x:Name="BookListBox" Grid.Row="1" Margin="15" SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged"/>
+        <ListBox x:Name="BookListBox" Grid.Row="1" Margin="15" SelectionMode="Single" FontSize="12 pt" SelectionChanged="ListBox_SelectionChanged"/>
 
         <Button Grid.Row="2" Content="Új könyv" Width="100" HorizontalAlignment="Right" Margin="15, 0, 15, 15" Click="UjKonyv_Click"/>
 

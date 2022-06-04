@@ -54,7 +54,9 @@ namespace WebApi_Client
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
+            if (ValidateBook())
+            {
                 _book.Title = CimTextBox.Text;
                 _book.Loaned = (bool)CheckBox.IsChecked;
                 _book.WhoLoan = KolcsonozteTextBox.Text;
@@ -65,12 +67,13 @@ namespace WebApi_Client
 
                 DialogResult = true;
                 Close();
-            
+            }
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (ValidateBook())
+            {
                 _book.Title = CimTextBox.Text;
                 _book.Loaned = (bool)CheckBox.IsChecked;
                 _book.WhoLoan = KolcsonozteTextBox.Text;
@@ -81,7 +84,7 @@ namespace WebApi_Client
 
                 DialogResult = true;
                 Close();
-           
+            }
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -94,6 +97,36 @@ namespace WebApi_Client
                 Close();
             }
         }
+        private bool ValidateBook()
+        {
+            if (string.IsNullOrEmpty(CimTextBox.Text))
+            {
+                MessageBox.Show("A cím nem lehet üres!");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(KolcsonozteTextBox.Text))
+            {
+                MessageBox.Show("A kölcsönző nem lehet üres!");
+                return false;
+            }
+
+            if (!KezdoDatePicker.SelectedDate.HasValue)
+            {
+                MessageBox.Show("A kezdő dátum nem lehet üres!");
+                return false;
+            }
+
+            if (!VegeDatePicker.SelectedDate.HasValue)
+            {
+                MessageBox.Show("A vége dátum nem lehet üres!");
+                return false;
+            }
+
+            return true;
+        }
+
+
 
     }
 }
