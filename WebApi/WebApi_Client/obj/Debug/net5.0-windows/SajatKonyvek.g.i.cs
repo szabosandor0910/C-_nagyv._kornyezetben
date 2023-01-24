@@ -77,7 +77,7 @@ namespace WebApi_Client {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WebApi_Client;component/sajatkonyvek.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WebApi_Client;V1.0.0.0;component/sajatkonyvek.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SajatKonyvek.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
